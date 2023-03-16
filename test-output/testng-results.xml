@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="34766" started-at="2023-03-16T16:50:06 IST" finished-at="2023-03-16T16:50:41 IST">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.DemoblazeRunner@8b87145]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="34766" started-at="2023-03-16T16:50:06 IST" finished-at="2023-03-16T16:50:41 IST">
+      <class name="runner.DemoblazeRunner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.DemoblazeRunner@8b87145]" name="setUpClass" is-config="true" duration-ms="4854" started-at="2023-03-16T16:50:06 IST" finished-at="2023-03-16T16:50:11 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6af91cc8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.DemoblazeRunner@8b87145]" name="runScenario" duration-ms="3001" started-at="2023-03-16T16:50:11 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-16T16:50:14 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login into the Application"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Product Store Page Test"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.DemoblazeRunner@8b87145]" name="runScenario" duration-ms="8691" started-at="2023-03-16T16:50:14 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-16T16:50:23 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add an item  to cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Product Store Page Test"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.DemoblazeRunner@8b87145]" name="runScenario" duration-ms="7500" started-at="2023-03-16T16:50:23 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-16T16:50:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add an item  to cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Product Store Page Test"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.DemoblazeRunner@8b87145]" name="runScenario" duration-ms="109" started-at="2023-03-16T16:50:31 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-16T16:50:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete an item from cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Product Store Page Test"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.DemoblazeRunner@8b87145]" name="runScenario" duration-ms="10475" started-at="2023-03-16T16:50:31 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-16T16:50:41 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Place order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Product Store Page Test"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='name'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_331'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:56391}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56391/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9baadcf336a489ff0efc4e53e3ba5bfe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='name'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_331'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:56391}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56391/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9baadcf336a489ff0efc4e53e3ba5bfe
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at stepdef.DemoblazeSteps.items_should_be_purchased(DemoblazeSteps.java:146)
+at ✽.Items should be purchased(file:///E:/Workspace/SDETTrainingWS/CaseStudyBDD/src/test/resources/features/Demoblaze.feature:23)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.DemoblazeRunner@8b87145]" name="tearDownClass" is-config="true" duration-ms="74" started-at="2023-03-16T16:50:41 IST" finished-at="2023-03-16T16:50:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.DemoblazeRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
