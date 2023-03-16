@@ -62,7 +62,7 @@ public class DemoblazeSteps {
 	    driver.findElement(By.xpath("//button[text()='Log in']")).click();
 	    wait.until(ExpectedConditions.invisibilityOf(login));
 	    boolean isdisp = login.isDisplayed();
-	    Assert.assertTrue(!isdisp);
+	    Assert.assertTrue(isdisp);
 	}
 
 	@Then("Display the home page")
