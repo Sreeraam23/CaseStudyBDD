@@ -61,6 +61,8 @@ public class DemoblazeSteps {
 	    driver.findElement(By.id("loginpassword")).sendKeys("testing");
 	    driver.findElement(By.xpath("//button[text()='Log in']")).click();
 	    wait.until(ExpectedConditions.invisibilityOf(login));
+	    boolean isdisp = login.isDisplayed();
+	    Assert.assertTrue(!isdisp);
 	}
 
 	@Then("Display the home page")
@@ -104,10 +106,8 @@ public class DemoblazeSteps {
 	@Given("Cart should display items")
 	public void cart_should_display_items() {
 		List<WebElement> prolist = driver.findElements(By.xpath("//td"));
-		boolean list = prolist.isEmpty();
-		if(!list) {
-			Assert.assertTrue(true);
-		}
+		boolean list = driver.findElement(By.xpath("(//td/a)[1]")).isDisplayed();
+		Assert.assertTrue(list);
 	}
 	@When("User delete an item")
 	public void user_delete_an_item() throws InterruptedException {
