@@ -59,7 +59,7 @@ public class DemoblazeSteps {
 	    login.sendKeys("Tester12345");
 	    wait.until(ExpectedConditions.elementToBeClickable(By.id("loginpassword")));
 	    driver.findElement(By.id("loginpassword")).sendKeys("testing");
-	    driver.findElement(By.id("login2")).click();
+	    driver.findElement(By.xpath("//button[text()='Log in']")).click();
 	    wait.until(ExpectedConditions.invisibilityOf(login));
 	    boolean isdisp = driver.findElement(By.xpath("//a[text()='Welcome Tester12345']")).isDisplayed();
 	    Assert.assertTrue(isdisp);
@@ -151,8 +151,11 @@ public class DemoblazeSteps {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Purchase']"))); 				
 		WebElement successMsg = driver.findElement(By.xpath("//h2[text()='Thank you for your purchase!']"));
 		wait.until(ExpectedConditions.visibilityOf(successMsg));
-		driver.findElement(By.xpath("//button[text()='OK']")).click();
+		WebElement okbtn = driver.findElement(By.xpath("//button[text()='OK']"));
+		okbtn.click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='OK']")));
+		boolean fin = okbtn.isEnabled();
+		Assert.assertTrue(fin);
 	}
 }
 	
