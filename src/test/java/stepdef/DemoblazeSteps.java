@@ -142,25 +142,30 @@ public class DemoblazeSteps {
 	}
 	@Then("Items should be purchased")
 	public void items_should_be_purchased() throws AWTException, InterruptedException {	
-//		Thread.sleep(5000);
-		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='name']")));		
+		Thread.sleep(5000);
+		wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement name = driver.findElement((By.id("name")));
+//		wait.until(ExpectedConditions.visibilityOf(name));		
 		name.sendKeys("Tester12345");
-		WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='country']")));
+		WebElement country = driver.findElement(By.id("country"));
+// 		wait.until(ExpectedConditions.visibilityOf(country));
 		country.sendKeys("xxxx");
-		WebElement city = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='city']")));
+		WebElement city = driver.findElement(By.id("city"));
+// 		wait.until(ExpectedConditions.visibilityOf(city));
 		city.sendKeys("yyyy");
-		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(1));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,250)");
-		WebElement card = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='card']")));
+		WebElement card = driver.findElement(By.id("card"));
+// 		wait.until(ExpectedConditions.visibilityOf(card));
 		card.sendKeys("00000001");
-		WebElement month = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='month']")));
+		WebElement month = driver.findElement(By.id("month"));
+// 		wait.until(ExpectedConditions.visibilityOf(month));
 		month.sendKeys("March");
-		WebElement year = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='year']")));
+		WebElement year = driver.findElement(By.id("year"));
+// 		wait.until(ExpectedConditions.visibilityOf(year));
 		year.sendKeys("2023");	
 		driver.findElement(By.xpath("//button[text()='Purchase']")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Purchase']")));
-		wait = new WebDriverWait(driver,Duration.ofSeconds(10));		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Purchase']"))); 				
 		WebElement successMsg = driver.findElement(By.xpath("//h2[text()='Thank you for your purchase!']"));
 		wait.until(ExpectedConditions.visibilityOf(successMsg));
 		driver.findElement(By.xpath("//button[text()='OK']")).click();
