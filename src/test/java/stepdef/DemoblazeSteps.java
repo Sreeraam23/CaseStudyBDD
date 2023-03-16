@@ -96,20 +96,17 @@ public class DemoblazeSteps {
 		List<WebElement> products = driver.findElements(By.xpath("//tr/td[2]"));
 		wait.until(ExpectedConditions.visibilityOfAllElements(products));
 		prosize = products.size();
-		boolean proAdded = true;
-		if(prosize>0) {
-			Assert.assertTrue(proAdded);
-		}
+		boolean scheck = prosize>0;
+		Assert.assertTrue(scheck);
+		
 	}
 	
-
 	@Given("Cart should display items")
 	public void cart_should_display_items() {
-		List<WebElement> listOfpro = driver.findElements(By.xpath("//td"));
-		boolean list = listOfpro.isEmpty();
-		boolean isAvail = true;
+		List<WebElement> prolist = driver.findElements(By.xpath("//td"));
+		boolean list = prolist.isEmpty();
 		if(!list) {
-			Assert.assertTrue(isAvail);
+			Assert.assertTrue(true);
 		}
 	}
 	@When("User delete an item")
@@ -123,47 +120,32 @@ public class DemoblazeSteps {
 		List<WebElement> currentpro = driver.findElements(By.xpath("//tr/td[2]"));
 		int currentsize = currentpro.size();
 		boolean chk = currentsize == prosize;
+		Assert.assertTrue(chk);
 
 	}
 	@When("User place order")
 	public void user_place_order() throws InterruptedException {
 		WebElement placeOrdBtn = driver.findElement(By.xpath("//button[text()='Place Order']"));
 		placeOrdBtn.click();		
-//		Thread.sleep(5000);
-		//wait.until(ExpectedConditions.elementToBeClickable(placeOrdBtn));
-//		robot = new Robot();
-//		for (int i = 0; i < 2; i++) {
-//			  robot.keyPress(KeyEvent.VK_CONTROL);
-//			  robot.keyPress(KeyEvent.VK_SUBTRACT);
-//			  robot.keyRelease(KeyEvent.VK_SUBTRACT);
-//			  robot.keyRelease(KeyEvent.VK_CONTROL);
-//			  }
-		
 		
 	}
 	@Then("Items should be purchased")
 	public void items_should_be_purchased() throws AWTException, InterruptedException {	
 		Thread.sleep(5000);
 		wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		WebElement name = driver.findElement((By.id("name")));
-//		wait.until(ExpectedConditions.visibilityOf(name));		
+		WebElement name = driver.findElement((By.id("name")));		
 		name.sendKeys("Tester12345");
 		WebElement country = driver.findElement(By.id("country"));
-// 		wait.until(ExpectedConditions.visibilityOf(country));
 		country.sendKeys("xxxx");
 		WebElement city = driver.findElement(By.id("city"));
-// 		wait.until(ExpectedConditions.visibilityOf(city));
 		city.sendKeys("yyyy");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,250)");
 		WebElement card = driver.findElement(By.id("card"));
-// 		wait.until(ExpectedConditions.visibilityOf(card));
 		card.sendKeys("00000001");
 		WebElement month = driver.findElement(By.id("month"));
-// 		wait.until(ExpectedConditions.visibilityOf(month));
 		month.sendKeys("March");
 		WebElement year = driver.findElement(By.id("year"));
-// 		wait.until(ExpectedConditions.visibilityOf(year));
 		year.sendKeys("2023");	
 		driver.findElement(By.xpath("//button[text()='Purchase']")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Purchase']"))); 				
