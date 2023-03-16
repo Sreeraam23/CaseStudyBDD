@@ -123,7 +123,7 @@ public class DemoblazeSteps {
 		List<WebElement> currentpro = driver.findElements(By.xpath("//tr/td[2]"));
 		int currentsize = currentpro.size();
 		boolean chk = currentsize == prosize;
-//		Assert.assertTrue(chk);
+
 	}
 	@When("User place order")
 	public void user_place_order() throws InterruptedException {
