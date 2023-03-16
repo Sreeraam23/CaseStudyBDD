@@ -59,9 +59,9 @@ public class DemoblazeSteps {
 	    login.sendKeys("Tester12345");
 	    wait.until(ExpectedConditions.elementToBeClickable(By.id("loginpassword")));
 	    driver.findElement(By.id("loginpassword")).sendKeys("testing");
-	    driver.findElement(By.xpath("//a[text()='Welcome Tester12345']")).click();
+	    driver.findElement(By.id("login2")).click();
 	    wait.until(ExpectedConditions.invisibilityOf(login));
-	    boolean isdisp = login.isDisplayed();
+	    boolean isdisp = driver.findElement("//a[text()='Welcome Tester12345']").isDisplayed();
 	    Assert.assertTrue(isdisp);
 	}
 
