@@ -113,8 +113,9 @@ public class DemoblazeSteps {
 		}
 	}
 	@When("User delete an item")
-	public void user_delete_an_item() {
+	public void user_delete_an_item() throws InterruptedException {
 	    driver.findElement(By.xpath("(//td/a)[1]")).click();
+	    Thread.sleep(5000);
 	}
 	@Then("Item should be deleted")
 	public void item_should_be_deleted() {
